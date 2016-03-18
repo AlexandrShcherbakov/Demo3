@@ -1,0 +1,107 @@
+# depslib dependency file v1.0
+1458073202 source:d:\dropbox\radiosity\demo3\main.cpp
+	"HydraExport.h"
+	<iostream>
+	<fstream>
+	<string>
+	"VectorMath.h"
+	"Simplifier.h"
+	"Geometry.h"
+	"SceneGeometry.h"
+	"GL\glew.h"
+	"GLUtility.h"
+	"GL\freeglut.h"
+
+1455231093 d:\dropbox\radiosity\demo3\external\include\hydraexport.h
+	"LiteMath.h"
+	<vector>
+	<string>
+	<map>
+	<map>
+	<hash_map>
+
+1455288037 d:\dropbox\radiosity\demo3\external\include\litemath.h
+	<math.h>
+	<stdlib.h>
+	<stdexcept>
+	<string>
+	<sstream>
+
+1457617522 d:\dropbox\radiosity\demo3\external\include\vectormath.h
+	<cmath>
+	<array>
+	<iostream>
+
+1457202750 d:\dropbox\radiosity\demo3\external\include\simplifier.h
+	<vector>
+	<utility>
+	<tuple>
+	<algorithm>
+	<set>
+	<map>
+	<list>
+	<cfloat>
+	<iostream>
+	"VectorMath.h"
+	"Geometry.h"
+
+1455446846 source:d:\dropbox\radiosity\demo3\simplifier\main.cpp
+	"Simplifier.h"
+	<iostream>
+
+1457689849 d:\dropbox\radiosity\demo3\external\include\geometry.h
+	<vector>
+	<set>
+	<map>
+	<iterator>
+	<algorithm>
+	<fstream>
+	"VectorMath.h"
+
+1426338928 d:\dropbox\radiosity\demo3\external\include\gl\freeglut.h
+	"freeglut_std.h"
+	"freeglut_ext.h"
+
+1426338928 d:\dropbox\radiosity\demo3\external\include\gl\freeglut_std.h
+	<windows.h>
+	<EGL/egl.h>
+	<GLES/gl.h>
+	<GLES2/gl2.h>
+	<OpenGL/gl.h>
+	<OpenGL/glu.h>
+	<GL/gl.h>
+	<GL/glu.h>
+	<stdlib.h>
+
+1426338928 d:\dropbox\radiosity\demo3\external\include\gl\freeglut_ext.h
+	<stdarg.h>
+
+1457821179 d:\dropbox\radiosity\demo3\external\include\glutility.h
+	"VectorMath.h"
+	"Geometry.h"
+	"SceneGeometry.h"
+	<map>
+	<string>
+	<cstdio>
+	<vector>
+	"GL\glew.h"
+	"GL\freeglut.h"
+	<GL\gl.h>
+
+1439232890 d:\dropbox\radiosity\demo3\external\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1457968795 d:\dropbox\radiosity\demo3\external\include\scenegeometry.h
+	<vector>
+	<unordered_map>
+	<set>
+	<map>
+	<algorithm>
+	"VectorMath.h"
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Utils" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="../External/lib/Utils" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wall" />
+					<Add directory="../External/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="..\External\lib\win32\glew32.lib" />
+					<Add library="..\External\lib\win32\glew32s.lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="../External/include/GLUtility.h" />
+		<Unit filename="../External/include/HydraExport.h" />
+		<Unit filename="../External/include/LiteMath.h" />
+		<Unit filename="../External/include/VectorMath.h" />
+		<Unit filename="GLUtility.cpp" />
+		<Unit filename="HydraExport.cpp" />
+		<Unit filename="VectorMath.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
