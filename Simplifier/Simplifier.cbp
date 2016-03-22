@@ -28,12 +28,12 @@
 			</Target>
 		</Build>
 		<Unit filename="../External/include/Geometry.h" />
+		<Unit filename="../External/include/Polygon.h" />
 		<Unit filename="../External/include/SceneGeometry.h" />
 		<Unit filename="../External/include/SimpleInCube.h" />
 		<Unit filename="../External/include/Simplifier.h" />
 		<Unit filename="Geometry.cpp" />
 		<Unit filename="Polygon.cpp" />
-		<Unit filename="Polygon.h" />
 		<Unit filename="SceneGeometry.cpp" />
 		<Unit filename="SimpleInCube.cpp" />
 		<Unit filename="main.cpp" />

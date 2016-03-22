@@ -9,6 +9,8 @@
 #include "GL\glew.h"
 #include "GLUtility.h"
 #include "GL\freeglut.h"
+#include "Polygon.h"
+#include "SimpleInCube.h"
 
 using namespace std;
 
@@ -119,7 +121,9 @@ SceneGeometry ExtractSceneFromFile(const std::string &path) {
     //points.resize(600);
     //indices.resize(600);
     baseGeom.setTriangles(points, indices);
-    simple.loadFromTriangles(points, indices);
+    g2.setEdges(SimpleInCube(points, 10));
+    //simple.loadFromTriangles(points, indices);
+
     return baseGeom;
 }
 
@@ -184,11 +188,11 @@ int main(int argc, char **argv) {
 	//simple.Write("Step 1 - unique points");
 	//simple.removeInternalPoints();
 	//baseGeom.FirstPlane();
-    g2 = g1;
-    g2.removeSimilarPoints();
-    std::cout << g2.getEdges().size() << " edges" << std::endl;
+    //g2 = g1;
+    //g2.removeSimilarPoints();
+    //std::cout << g2.getEdges().size() << " edges" << std::endl;
     //g2.removeSmallestEdges(90000);
-    std::cout << g2.getEdges().size() << " edges" << std::endl;
+    //std::cout << g2.getEdges().size() << " edges" << std::endl;
 	p1->setGeometry(g1);
     p1->setUniform("col", vec3(1, 0, 0));
     p2->setGeometry(g2);

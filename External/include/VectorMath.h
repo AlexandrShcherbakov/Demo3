@@ -18,36 +18,6 @@ T sqr(T t);
 ///Classes for vectors and matrices
 ///*****************************************************************************
 
-///Class for vector
-template <uint X>
-class vec {
-protected:
-    ///Coordinates
-    std::array<float, X> coords;
-public:
-
-    ///Constructors
-    vec<X>();
-    vec<X>(float* coords);
-    vec<X>(const vec<X> &v);
-
-    ///Operators
-    vec<X> operator+(const vec<X> &v);
-    vec<X> operator-(const vec<X> &v);
-    vec<X> operator*(const vec<X> &v);
-    vec<X> operator*(const float &k);
-    vec<X> operator/(const float &k);
-    float& operator[](const uint index);
-    const float& operator[](const uint index) const;
-    //vec<X>& operator=(const vec<X> &v);
-    bool operator==(const vec<X> &v) const;
-    bool operator<(const vec<X> &v) const;
-
-    ///Other methods
-    float length() const;
-};
-
-
 ///Class for 3D-vectors
 
 class vec3 {
@@ -71,7 +41,6 @@ public:
     float& operator[](const uint index);
     const float& operator[](const uint index) const;
     bool operator==(const vec3 &v) const;
-    //bool operator<(const vec3 &v) const;
 
     friend std::ostream& operator<<(std::ostream& os, const vec3& v);
 };
@@ -105,42 +74,11 @@ public:
     const float& operator[](const uint index) const;
     bool operator==(const vec4 &v) const;
     bool operator!=(const vec4 &v) const;
-    //bool operator<(const vec4 &v) const;
 
     friend std::ostream& operator<<(std::ostream& os, const vec4& v);
 
     vec3 xyz() const;
 };
-
-///Class for XD-matrices
-template<uint X>
-class mat {
-protected:
-    ///Rows
-    vec<X> rows[X];
-public:
-
-    ///Constructors
-    mat<X>();
-    mat<X>(float diagNum);
-    mat<X>(float* elements);
-    mat<X>(float** elements);
-    mat<X>(const mat<X> &m);
-
-    ///Operators
-    vec<X> operator*(const vec<X> &v);
-    mat<X> operator*(const mat<X> &m);
-    mat<X> operator+(const mat<X> &m) const;
-    mat<X> operator+=(const mat<X> &m);
-    vec<X>& operator[](const uint index);
-    const vec<X>& operator[](const uint index) const;
-
-    ///Other methods
-    vec<X>& col(const uint index);
-    const vec<X>& col(const uint index) const;
-    mat<X> unmatrixN3() const;
-};
-
 
 class mat4 {
 protected:

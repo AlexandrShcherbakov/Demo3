@@ -4,8 +4,8 @@ Polygon::Polygon() {
 
 }
 
-template <typename Iter>
-Polygon::Polygon(Iter begin, Iter end) {
+template <class T>
+Polygon::Polygon(T begin, T end) {
     points = std::vector<vec4>(begin, end);
 }
 
@@ -53,9 +53,9 @@ std::pair<Polygon, Polygon> Polygon::splitByPlane(const vec4& plane) const {
 
     std::vector<vec4> neg, pos;
     for (auto p: newPoints) {
-        if (dot(p, plane) <= 0)
+        if (dot(p, plane) <= VEC_EPS)
             neg.push_back(p);
-        if (dot(p, plane) >= 0)
+        if (dot(p, plane) >= -VEC_EPS)
             pos.push_back(p);
     }
     return std::make_pair(Polygon(neg.begin(), neg.end()), Polygon(pos.begin(), pos.end()));
@@ -72,4 +72,17 @@ std::vector<vec4> Polygon::getEdges() const {
     if (edges.size() < 3) return edges;
     edges.push_back(points.back());
     return edges;
+}
+
+void Polygon::changePoint(vec4 oldValue, vec4 newValue) {
+    for(uint i = 0; i < points.size(); ++i) {
+		if (points[i] == oldValue) {
+            points[i] = newValue;
+            if (points[(points.size() + i - 1) % points.size()] == points[i]) i = (points.size() + i - 1) % points.size();
+            if (points[(i + 1) % points.size()] == points[i]) {
+                points.erase(points.begin() + i);
+                i--;
+            }
+		}
+    }
 }

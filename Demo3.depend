@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1458073202 source:d:\dropbox\radiosity\demo3\main.cpp
+1458589745 source:d:\dropbox\radiosity\demo3\main.cpp
 	"HydraExport.h"
 	<iostream>
 	<fstream>
@@ -11,6 +11,8 @@
 	"GL\glew.h"
 	"GLUtility.h"
 	"GL\freeglut.h"
+	"Polygon.h"
+	"SimpleInCube.h"
 
 1455231093 d:\dropbox\radiosity\demo3\external\include\hydraexport.h
 	"LiteMath.h"
@@ -27,7 +29,7 @@
 	<string>
 	<sstream>
 
-1457617522 d:\dropbox\radiosity\demo3\external\include\vectormath.h
+1458339012 d:\dropbox\radiosity\demo3\external\include\vectormath.h
 	<cmath>
 	<array>
 	<iostream>
@@ -76,7 +78,7 @@
 1426338928 d:\dropbox\radiosity\demo3\external\include\gl\freeglut_ext.h
 	<stdarg.h>
 
-1457821179 d:\dropbox\radiosity\demo3\external\include\glutility.h
+1458379807 d:\dropbox\radiosity\demo3\external\include\glutility.h
 	"VectorMath.h"
 	"Geometry.h"
 	"SceneGeometry.h"
@@ -104,4 +106,18 @@
 	<map>
 	<algorithm>
 	"VectorMath.h"
+
+1458576721 d:\dropbox\radiosity\demo3\external\include\polygon.h
+	<vector>
+	<utility>
+	"VectorMath.h"
+
+1458576088 d:\dropbox\radiosity\demo3\external\include\simpleincube.h
+	"VectorMath.h"
+	"Polygon.h"
+	<vector>
+	<set>
+	<utility>
+	<queue>
+	<tuple>
 

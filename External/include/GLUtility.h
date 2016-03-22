@@ -15,7 +15,6 @@
 #include <GL\gl.h>
 
 ///Shader programs
-//static std::map<std::string, GLuint> progGL;
 class ShaderProgram {
 private:
     GLuint programId;
@@ -38,13 +37,6 @@ public:
 };
 
 mat4 Matrix4Rotate(vec3 v);
-
-static GLuint greenSkeleton;
-
-static std::map<std::string, GLuint> VAO;
-
-static std::map<std::string, GLuint> VBO;
-
 
 GLuint LoadShader(const std::string& name);
 

@@ -282,14 +282,15 @@ void SceneGeometry::setEdges(const std::vector<vec4>& edges) {
 		bool firstEntry = true;
         uint index;
         for (uint j = uniquePoints.size(); j > 0 && firstEntry; --j) {
-            if (!(firstEntry = edges[i] == uniquePoints[j]))
+            if (!(firstEntry = (edges[i] != uniquePoints[j])))
                 index = j;
         }
         if (firstEntry) {
             index = uniquePoints.size();
             uniquePoints.push_back(edges[i]);
-            newEdges.push_back(index);
         }
+        newEdges.push_back(index);
     }
+    std::cout << uniquePoints.size() << ' ' << newEdges.size() << std::endl;
     setEdges(uniquePoints, newEdges);
 }

@@ -10,13 +10,14 @@ class Polygon
 {
     public:
         Polygon();
-        template <typename Iter>
-        Polygon(Iter begin, Iter end);
+        template <class T>
+        Polygon(T begin, T end);
         Polygon(const Polygon &p);
 
         ///Tools
         std::pair<Polygon, Polygon> splitByPlane(const vec4& plane) const;
         bool isEmpty() const;
+        void changePoint(vec4 oldValue, vec4 newValue);
 
         ///Getters
         uint getSize() const;
